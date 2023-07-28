@@ -1,0 +1,38 @@
+name: 04 CI
+
+on:
+  push:
+    paths:
+      - '04/**' # Only trigger on push to the "04" folder
+    branches: [ "main" ]
+  pull_request:
+    paths:
+      - '04/**' # Only trigger on pull request involving changes in the "04" folder
+    branches: [ "main" ]
+  workflow_dispatch: # Enable manual triggering
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libgtkmm-3.0-dev
+        
+    - name: Configure CMake
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} ${{github.workspace}}/04
+
+    - name: Build
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      run: ctest -C ${{env.BUILD_TYPE}}
