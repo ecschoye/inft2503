@@ -1,58 +1,25 @@
 #include <iostream>
-#include "circle/Circle.h"
 #include "commodity/Commodity.h"
 
-
 int main() {
-    std::cout << "Task 1 and 2" << std::endl;
-
-    // Create a circle object
-    Circle circle(5);
-
-    // Print area and circumference of circle
-    std::cout << "Circle " << std::endl;
-    std::cout << "Area: " << circle.getArea() << std::endl;
-
-    std::cout << "Circumference: " << circle.getCircumference() << std::endl;
-
-    std::cout << std::endl;
-
-    std::cout << "Task 3" << std::endl;
-
-    const double quantity = 2.5;
-
-    // Create a commodity object
-    Commodity commodity("Norvegia", 123, 73.50);
-
-    std::cout << "Price per kilo: " << commodity.getPrice(quantity) << std::endl;
-    std::cout << "Price for " << quantity << " kilos: " << commodity.getPrice(quantity) << std::endl;
-    std::cout << "Price for " << quantity << " kilos with sales tax: " << commodity.getPriceWithSalesTax(quantity) << std::endl;
-
-    commodity.setPrice(79.60);
-    std::cout << std::endl;
-
-    std::cout << "New price per kilo: " << commodity.getPrice(quantity) << std::endl;
-    std::cout << "New price for " << quantity << " kilos: " << commodity.getPrice(quantity) << std::endl;
-    std::cout << "New price for " << quantity << " kilos with sales tax: " << commodity.getPriceWithSalesTax(quantity) << std::endl;
-
-
-
-    std::cout << std::endl;
-
     std::cout << "Task 4" << std::endl;
 
-    std::string word1, word2, word3;
 
+    // Get three words from the user
     std::cout << "Enter three words: " << std::endl;
+    std::string word1, word2, word3;
     std::cin >> word1 >> word2 >> word3;
 
+    // Concatenate the words into a single sentence
     std::string sentence = word1 + " " + word2 + " " + word3;
 
+    // Display the length of each word and the entire sentence
     std::cout << "Length of word1: " << word1.length() << std::endl;
     std::cout << "Length of word2: " << word2.length() << std::endl;
     std::cout << "Length of word3: " << word3.length() << std::endl;
     std::cout << "Length of sentence: " << sentence.length() << std::endl;
 
+    // If the sentence length is greater than 11, create a new sentence with 'xxx' at positions 9, 10, and 11
     if (sentence.length() > 11) {
         std::string sentence2 = sentence;
         sentence2[9] = 'x';
@@ -62,6 +29,7 @@ int main() {
         std::cout << "Sentence2: " << sentence2 << std::endl;
     }
 
+    // Check for the presence of the word "hallo" in the sentence
     if (sentence.length() > 5) {
         std::string sentence_start = sentence.substr(0, 5);
         std::cout << "Sentence: " << sentence << std::endl;
@@ -77,8 +45,8 @@ int main() {
         std::cout << "Did not find hallo in sentence" << std::endl;
     }
 
+    // Find all occurrences of the substring "er" in the sentence
     std::string substring = "er";
-
     int index = 0;
     while ((index = sentence.find(substring, index)) != std::string::npos) {
         std::cout << "Found substring " << substring << " at position " << index << std::endl;

@@ -3,4 +3,7 @@ project(02)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(02 main.cpp)
+add_executable(task_1 task_1.cpp)
+add_executable(task_4 task_4.cpp)
+add_executable(task_5 task_5.cpp)
+add_executable(task_6 task_6.cpp)

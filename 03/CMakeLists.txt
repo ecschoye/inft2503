@@ -3,4 +3,14 @@ project(03)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(03 main.cpp circle/Circle.cpp circle/Circle.h commodity/Commodity.cpp commodity/Commodity.h main.cpp)
+include_directories(circle)
+include_directories(commodity)
+
+# Create an executable for task_2
+add_executable(task_2 task_2.cpp circle/Circle.cpp commodity/Commodity.cpp)
+
+# Create an executable for task_3
+add_executable(task_3 task_3.cpp circle/Circle.cpp commodity/Commodity.cpp)
+
+# Create an executable for task_4
+add_executable(task_4 task_4.cpp circle/Circle.cpp commodity/Commodity.cpp)
