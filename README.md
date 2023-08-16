@@ -11,7 +11,6 @@
 7. ![07](https://github.com/ecschoye/inft2503/actions/workflows/ci_07.yml/badge.svg)
 8. ![08](https://github.com/ecschoye/inft2503/actions/workflows/ci_08.yml/badge.svg)
 9. ![09](https://github.com/ecschoye/inft2503/actions/workflows/ci_09.yml/badge.svg)
-10. ![10](https://github.com/ecschoye/inft2503/actions/workflows/ci_10.yml/badge.svg)
 
 ## Overview
 
