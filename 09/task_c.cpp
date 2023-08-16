@@ -12,7 +12,7 @@ ostream &operator<<(ostream &out, const vector<int> &table) {
 }
 
 void print(int i) {
-    cout << (i == 1 ? "Omtrent lik" : "Ikke lik") << endl;
+    cout << (i == 1 ? "Approximately equal" : "Not equal") << endl;
 }
 
 bool isOdd (int i) {return i % 2 == 1;}

@@ -19,9 +19,8 @@ public:
 
 
 int main() {
-    //Oppgave 2
-    std::cout << std::endl;
-    std::cout << "Oppgave 2" << std::endl;
+    // Task 2
+    std::cout << "Task 2" << std::endl;
     std::cout << std::endl;
 
     Pair<double, int> p1(3.5, 14);
@@ -30,9 +29,9 @@ int main() {
     std::cout << "p2: " << p2.first << ", " << p2.second << std::endl;
 
     if (p1 > p2)
-        std::cout << "p1 er størst" << std::endl;
+        std::cout << "p1 is greater" << std::endl;
     else
-        std::cout << "p2 er størst" << std::endl;
+        std::cout << "p2 is greater" << std::endl;
 
     auto sum = p1 + p2;
     std::cout << "Sum: " << sum.first << ", " << sum.second << std::endl;

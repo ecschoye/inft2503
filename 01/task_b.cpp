@@ -16,15 +16,13 @@ int main() {
 }
 
 void task_b(const int length) {
-    cout << "Oppgave B" <<endl;
-    //Task 1b
+    cout << "Task B" << endl;
 
     double temperatures[length];
 
     int low = 0;
     int mid = 0;
     int high = 0;
-    int temperature;
 
     read_temperatures(temperatures, length);
 
@@ -37,9 +35,9 @@ void task_b(const int length) {
             mid++;
     }
     cout << "------------------------------" << endl;
-    cout << "Antall under 10 er " << low << endl;
-    cout << "Antall mellom 10 og 20 er " << mid << endl;
-    cout << "Antall over 20 er " << high << endl;
+    cout << "Number of temperatures below 10: " << low << endl;
+    cout << "Number of temperatures between 10 and 20: " << mid << endl;
+    cout << "Number of temperatures above 20: " << high << endl;
     cout << endl;
 }
 

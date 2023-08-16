@@ -3,17 +3,17 @@
 
 template <typename T>
 bool equal(T a, T b) {
-    std::cout << "Funksjonstemplate for å finne ut om " << a << " og " << b << " er like." << std::endl;
+    std::cout << "Function template to determine if " << a << " and " << b << " are equal." << std::endl;
     return a == b;
 }
 
 bool equal(double a, double b) {
-    std::cout << "Funksjonstemplate for å finne ut om " << a << " og " << b << " kan betraktes som like." << std::endl;
+    std::cout << "Function template to determine if " << a << " and " << b << " can be considered equal." << std::endl;
     return abs(a - b ) < 0.00001;
 }
 
 int main() {
-    //Oppgave 1
+    // Task 1
     std::cout << "Oppgave 1" << std::endl;
 
     std::cout << std::endl;
