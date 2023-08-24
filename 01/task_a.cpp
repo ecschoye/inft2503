@@ -27,9 +27,9 @@ void task_a(const int length) {
             continue; // Restart the loop
         }
 
-        if (temperature >= 20)
+        if (temperature > 20)
             high++;
-        else if (temperature <= 10)
+        else if (temperature < 10)
             low++;
         else
             mid++;

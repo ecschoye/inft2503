@@ -27,9 +27,9 @@ void task_b(const int length) {
     read_temperatures(temperatures, length);
 
     for (int i = 0; i < length; ++i) {
-        if (temperatures[i] >= 20)
+        if (temperatures[i] > 20)
             high++;
-        else if (temperatures[i] <= 10)
+        else if (temperatures[i] < 10)
             low++;
         else
             mid++;
