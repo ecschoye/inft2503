@@ -11,7 +11,7 @@ void task_a(const int length) {
     int low = 0;
     int mid = 0;
     int high = 0;
-    int temperature;
+    double temperature;
 
 
     cout << "You need to enter " << length << " temperatures." << endl;
